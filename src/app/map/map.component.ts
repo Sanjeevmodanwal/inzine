@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
 import { MapsAPILoader, MouseEvent } from '@agm/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -5,12 +6,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 declare var google: any;
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
 })
-export class HomeComponent implements OnInit {
-  
+export class MapComponent implements OnInit {
+
   address: string;
   private geoCoder;
   @ViewChild('search',{ static: false })
@@ -43,8 +44,4 @@ export class HomeComponent implements OnInit {
       });
     });
   }
-
-  
-  
-
 }
